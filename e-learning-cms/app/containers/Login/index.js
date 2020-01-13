@@ -2,11 +2,23 @@ import React, { Component } from 'react'
 import { Input, Checkbox, Button } from 'antd';
 import './styles.css'
 import logo from '../../images/icon-512x512.png'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect,
+    useHistory,
+    useLocation
+} from "react-router-dom";
 export default class Login extends Component {
+    _onLogin = () => {
+        
+    }
     render() {
         return (
             <div className="container">
-                    <img src={logo} className="logo" />
+                <img src={logo} className="logo" />
                 <div className="login-box">
                     <div className="credentials">
                         <text className="label">Username</text>
@@ -18,7 +30,7 @@ export default class Login extends Component {
                     </div>
                     <div className="more">
                         <Checkbox >Remember me</Checkbox>
-                        <Button type="primary" size="large">Log in</Button>
+                        <Button type="primary" size="large" onClick={this._onLogin}>Log in</Button>
                     </div>
                 </div>
                 <text className="forgot">Forgot your password ?</text>

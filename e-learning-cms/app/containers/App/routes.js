@@ -11,15 +11,15 @@
 import React from 'react'
 import HomePage from '../HomePage'
 import Login from '../Login'
+import CustomLayout from '../Layout/index'
 export const routes = [
     {
-        path: "/",
-        exact: true,
-        main: () => <HomePage />
+        path: ["/","/login"],
+        exact:true,
+        main: () => <Login />
     },
     {
-        path: "/login",
-        exact: true,
-        main: () => <Login />
+        path:"/layout",
+        main: () => <CustomLayout />
     },
 ];
