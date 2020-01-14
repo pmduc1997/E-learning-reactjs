@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd'
 const { Content } = Layout
+
+import { Switch, Route, Router } from 'react-router-dom';
+import { routes } from './routes'
 export default class CustomContent extends Component {
     render() {
         return (
@@ -12,7 +15,18 @@ export default class CustomContent extends Component {
                     minHeight: 280,
                 }}
             >
-                Content
+                <Switch>
+                    {routes.map((route, index) => (
+                        // Render more <Route>s with the same paths as
+                        // above, but different components this time.
+                        <Route
+                            key={index}
+                            path={route.path}
+                            exact={route.exact}
+                            children={<route.main />}
+                        />
+                    ))}
+                </Switch>
             </Content>
         )
     }

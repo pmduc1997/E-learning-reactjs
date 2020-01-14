@@ -9,21 +9,8 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 import React from 'react'
-import HomePage from '../HomePage'
-import Login from '../Login'
-import Dashboard from '../Dashboard'
-import CustomLayout from '../Layout/index'
-
+import Dashboard from '../../Dashboard'
 export const routes = [
-    {
-        path: ["/","/login"],
-        exact:true,
-        main: () => <Login />,
-    },
-    {
-        path:"/layout",
-        main: () => <CustomLayout />,
-    },
     {
         path: "/dashboard",
         exact:true,

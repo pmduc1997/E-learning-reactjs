@@ -16,6 +16,7 @@ export default class CustomLayout extends Component {
                     <Content />
                     <Footer />
                 </Layout>
+
             </Layout>
 
         )
