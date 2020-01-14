@@ -3,7 +3,8 @@ import { Layout } from 'antd'
 const { Content } = Layout
 
 import { Switch, Route, Router } from 'react-router-dom';
-import { routes } from './routes'
+import { routes } from './routesSider'
+import Dashboard from '../../Dashboard'
 export default class CustomContent extends Component {
     render() {
         return (

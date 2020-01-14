@@ -12,21 +12,17 @@ import React from 'react'
 import HomePage from '../HomePage'
 import Login from '../Login'
 import Dashboard from '../Dashboard'
-import CustomLayout from '../Layout/index'
+import Layout from '../Layout/index'
 
 export const routes = [
     {
-        path: ["/","/login"],
+        path: "/login",
         exact:true,
         main: () => <Login />,
     },
     {
-        path:"/layout",
-        main: () => <CustomLayout />,
-    },
-    {
-        path: "/dashboard",
+        path:"/",
         exact:true,
-        main: () => <Dashboard />
+        main: () => <Layout />,
     },
 ];

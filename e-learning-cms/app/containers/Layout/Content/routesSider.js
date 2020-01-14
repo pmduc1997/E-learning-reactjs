@@ -10,10 +10,16 @@
  */
 import React from 'react'
 import Dashboard from '../../Dashboard'
+import User from '../../User'
 export const routes = [
     {
-        path: "/dashboard",
+        path: "/Dashboard",
         exact:true,
         main: () => <Dashboard />
+    },
+    {
+        path: "/User",
+        exact:true,
+        main: () => <User />
     },
 ];
